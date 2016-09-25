@@ -38,6 +38,8 @@ Datatime <- strptime(paste(SubDate$Date, SubDate$Time), "%Y-%m-%d %H:%M:%S")
 ## Now create subsequent plots
 
 par(mfrow=c(2,2))
+
+png (file="plot4.png", width=480, height=480)
 plot(Datatime,Global_active_power, type="l", xlab="", ylab = "Global Active Power")
 
 
@@ -51,8 +53,5 @@ lines(Datatime, Submetering3, col="Blue")
 
 
 GlobalReactivePower<- plot(Datatime,GlobalReactivePower,type="l", xlab = "dateime", ylab="Global_reactive_power")
-
-dev.copy(png, file="plot4.png", width=480, height=480)
 dev.off()
 
-par(mfrow = c(1,1))
