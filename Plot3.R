@@ -7,9 +7,6 @@ Dataset <- read.table("/Users/chahanasigdel/data/household_power_consumption.txt
 ## Change the date formart using as.Date Function
 Dataset$Date <- as.Date(Dataset$Date,format="%d/%m/%Y")
 
-##Change the time format using strptime
-
-
 ## Now subset the dates to two days 
 SubDate <- subset(Dataset, subset=(Date >="2007-02-01" & Date <= "2007-02-02"))
 
