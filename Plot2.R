@@ -4,7 +4,7 @@
 ## Read Table by creating a variable called "Dataset
 Dataset <- read.table("/Users/chahanasigdel/data/household_power_consumption.txt", header=TRUE, sep=";")
 
-## Change the date formart using as.Date Function
+## Change the date format using as.Date Function
 Dataset$Date <- as.Date(Dataset$Date,format="%d/%m/%Y")
 
 ##Change the time format using strptime
