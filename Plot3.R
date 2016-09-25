@@ -7,9 +7,6 @@ Dataset <- read.table("/Users/chahanasigdel/data/household_power_consumption.txt
 ## Change the date formart using as.Date Function
 Dataset$Date <- as.Date(Dataset$Date,format="%d/%m/%Y")
 
-##Change the time format using strptime
-
-
 ## Now subset the dates to two days 
 SubDate <- subset(Dataset, subset=(Date >="2007-02-01" & Date <= "2007-02-02"))
 
@@ -30,4 +27,4 @@ Submetering3<- as.numeric(as.character(SubDate$Sub_metering_3))
  lines(Datatime, Submetering2, col="Red")
  lines(Datatime, Submetering3, col="Blue")
  dev.copy(png, file="plot3.png", width=480, height=480)
- dev.off
+ dev.off ()
