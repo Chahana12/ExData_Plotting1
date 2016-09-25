@@ -27,4 +27,4 @@ Submetering3<- as.numeric(as.character(SubDate$Sub_metering_3))
  lines(Datatime, Submetering2, col="Red")
  lines(Datatime, Submetering3, col="Blue")
  dev.copy(png, file="plot3.png", width=480, height=480)
- dev.off
+ dev.off ()
