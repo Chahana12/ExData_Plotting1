@@ -17,7 +17,7 @@ SubDate <- subset(Dataset, subset=(Date >="2007-02-01" & Date <= "2007-02-02"))
 Datatime <- strptime(paste(SubDate$Date, SubDate$Time), "%Y-%m-%d %H:%M:%S")
 
 ## Subset the three "Energy Sub Metering" to the desired dates 
-Submetering1 <- as.numeric(as.character(SubDate$Global_active_power))
+Submetering1 <- as.numeric(as.character(SubDate$Submetering1))
 
 ## Plot
 
